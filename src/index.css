@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+:root {
+  --color-primary: #7C3AED;
+  --color-primary-hover: #6D28D9;
+  --color-secondary: #A78BFA;
+  --color-accent: #FF6B6B;
+  --color-accent-hover: #F05252;
+  --color-success: #10B981;
+  --color-deep-indigo: #1F1647;
+  --color-surface: #FFFFFF;
+  --color-bg: #F8F7FC;
+  --color-surface-subtle: #F3F0FA;
+  --color-text-primary: #211A35;
+  --color-text-secondary: #6B6680;
+  --color-border: #E7E1F2;
+  --color-warning: #F59E0B;
+  --color-danger: #EF4444;
+  --shadow-card: 0 6px 24px rgba(31, 22, 71, 0.06);
+  --shadow-hover: 0 10px 30px rgba(31, 22, 71, 0.10);
+}
+
+@layer base {
+  html {
+    font-family: 'Plus Jakarta Sans', 'Noto Sans Tamil', -apple-system, BlinkMacSystemFont, sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text-primary);
+    overflow-x: hidden;
+  }
+
+  .font-mono-tabular {
+    font-family: 'JetBrains Mono', monospace;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+.aurora-hero-gradient {
+  background: linear-gradient(135deg, #1F1647 0%, #37237E 48%, #6D28D9 100%);
+}
+
+.aurora-soft-gradient {
+  background: linear-gradient(135deg, #F3F0FA 0%, #FFFFFF 55%, #EDE9FE 100%);
+}
+
+.card-surface {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-card);
+  border-radius: 16px;
+}
+
+.card-surface-hover {
+  transition: transform 180ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 180ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-surface-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card-surface-hover,
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

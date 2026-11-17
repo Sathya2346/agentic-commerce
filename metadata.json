@@ -1,0 +1,8 @@
+{
+  "name": "Agentic Commerce",
+  "description": "Multi-Agent AI E-Commerce Platform with Customer Storefront, Live AI Shopping Workspace, and Role-Based Admin Console.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
